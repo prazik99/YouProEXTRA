@@ -19,6 +19,15 @@ inputs:
   youquality:
     required: false
     default: 'true'
+  youchoose:
+    required: false
+    default: 'true'
+  gonerino:
+    required: false
+    default: 'true'
+  yougetcaption:
+    required: false
+    default: 'true'
   isponsorblock:
     required: false
     default: 'false'
@@ -215,6 +224,7 @@ runs:
         key: youslider-${{ inputs.youslider_commit }}-sdk${{ inputs.sdk_version }}
 
     - uses: actions/cache@v5.0.5
+      if: inputs.youchoose == 'true'
       id: cache_youchoose
       with:
         path: ${{ github.workspace }}/youchoose.deb
@@ -228,7 +238,7 @@ runs:
         key: ytsilentvote-${{ inputs.ytsilentvote_commit }}-sdk${{ inputs.sdk_version }}
 
     - uses: actions/cache@v5.0.5
-      if: inputs.gonerino_commit != ''
+      if: inputs.gonerino == 'true'
       id: cache_gonerino
       with:
         path: ${{ github.workspace }}/gonerino.deb
@@ -242,7 +252,7 @@ runs:
         key: ytweaks-${{ inputs.ytweaks_commit }}-sdk${{ inputs.sdk_version }}
 
     - uses: actions/cache@v5.0.5
-      if: inputs.yougetcaption_commit != ''
+      if: inputs.yougetcaption == 'true'
       id: cache_yougetcaption
       with:
         path: ${{ github.workspace }}/ygc.deb
