@@ -90,6 +90,6 @@ NOTE: If you modified workflow files, delete any existing caches in the Actions 
   > +21.25.5 version and newer are **not recommended**!  
   > If you want a newer version, you can build it in the **Actions** tab.
   
-   <li><strong>Date tested:</strong> July 16, 2026</li>
-   <li><strong>YouPro/YTLite/YTKP:</strong> 0.3/5.2.1/5.9.4</li>
+   <li><strong>Date tested:</strong> July 17, 2026</li>
+   <li><strong>YouPro/YTLite/YTKP:</strong> 0.3/5.2.2/5.9.4</li>
 </ul>
